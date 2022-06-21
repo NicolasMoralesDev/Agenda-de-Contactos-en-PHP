@@ -7,6 +7,7 @@ $contactoNuevo = array("34576",$_POST['nombre'], $_POST['apellido'], $_POST['dir
 
 $agenda->agregarContacto($contactoNuevo);
 $agenda->guardarContactos();
+
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +38,7 @@ $agenda->guardarContactos();
     <div class="container-fluid">
       <a class="navbar-brand font-weight-bold" href="#">
         <img class="mr-2" src="#" />
-        ContactsApp
+        Agenda de Contactos
       </a>
       <button
         class="navbar-toggler"
@@ -53,10 +54,7 @@ $agenda->guardarContactos();
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./add.html">Add Contact</a>
+            <a class="nav-link" href="ListaDeContactos.php">ver agenda</a>
           </li>
         </ul>
       </div>
