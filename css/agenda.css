@@ -12,3 +12,18 @@ ul , ol , li{
      list-style: none;
      text-decoration: none;
 }
+
+main {
+     padding-top: 3rem;
+}
+
+table thead {
+    text-align: center;
+}
+.container-footer{
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 3rem;
+    bottom: 0;
+    height: 2rem;
+}

@@ -3,13 +3,15 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css -->
     <link rel="stylesheet" href="./css/agenda.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/directorio-telefonico.png" type="image/x-icon">
      <!-- Estilos Boostrap -->
      <link
     rel="stylesheet"
@@ -53,5 +55,25 @@
       </div>
     </div>
   </nav>
+  <main>
+  <table class="table table-dark table-striped container">
+   <thead>
+    <td>Nombre</td>
+    <td>Apellido</td>
+    <td>Direccion</td>
+    <td>Telefono</td>
+   </thead>
+   <tbody>
+   
+
+   </tbody>
+</table>
+
+  </main>
+  <footer class="container-fluid container-footer d-flex flex-column align-items-center">
+    
+        <p>Alumno: Juan Nicolas Morales</p>
+    
+  </footer>
 </body>
 </html>
