@@ -1,0 +1,22 @@
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+     text-decoration: none;
+}
+html{
+     font-size: 10px;
+     scroll-behavior: auto;
+}
+ul , ol , li{
+     list-style: none;
+     text-decoration: none;
+}
+
+.container-footer{
+    font-size: 2rem;
+    position: absolute;
+    margin-bottom: 3rem;
+    bottom: 0;
+    height: 2rem;
+}
