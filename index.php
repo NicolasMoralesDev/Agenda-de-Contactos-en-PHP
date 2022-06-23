@@ -40,23 +40,23 @@
                 <form class="row g-3 form-floating" method="POST" action="recibirDatos.php">
                     <div class="col-6">
                         <label for="floatingInputValue" class="form-label">Nombre:</label>
-                        <input type="text" class="form-control" name="nombre" id=" floatingInputValue" placeholder="Nombre">
+                        <input type="text" required class="form-control" name="nombre" id=" floatingInputValue" placeholder="Nombre">
                     </div>
                     <div class="col-6">
                         <label for="floatingInputValue" class="form-label">Apellido:</label>
-                        <input type="text" class="form-control" name="apellido" id=" floatingInputValue" placeholder="Apellido">
+                        <input type="text" required class="form-control" name="apellido" id=" floatingInputValue" placeholder="Apellido">
                     </div>
                     <div class="col-6">
                         <label for="floatingInputValue" class="form-label">DNI:</label>
-                        <input type="text" class="form-control" name="dni" id=" floatingInputValue" placeholder="Documento">
+                        <input type="number" required class="form-control" name="dni" id=" floatingInputValue" placeholder="Documento">
                     </div>
                     <div class="col-6">
                         <label for="floatingInputValue" class="form-label">Direccion:</label>
-                        <input type="text" class="form-control" name="direccion" id=" floatingInputValue" placeholder="Direccion">
+                        <input type="text" required class="form-control" name="direccion" id=" floatingInputValue" placeholder="Direccion">
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Telefonos:</label>
-                        <textarea class="form-control" name="telefono" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control"  required name="telefono" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">añadir</button>
