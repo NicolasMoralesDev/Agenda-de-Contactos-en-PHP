@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -35,6 +36,33 @@
         </div>
     </nav>
     <main>
+        <?php
+
+        if (isset($_GET['estado'])) {  //si esta seteada la variable
+            if ($_GET['estado'] == "true") {   ?> 
+                <div class="alert alert-success d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                        <use xlink:href="#check-circle-fill" />
+                    </svg>
+                    <div>
+                        <?php
+                        echo "<p>" . $_GET['mensaje'] ."</p>";
+                        ?>
+                    </div>
+                </div>
+            <?php  } else { if ($_GET['estado'] == "false") {  ?>
+                <div class="alert alert-danger d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                        <use xlink:href="#check-circle-fill" />
+                    </svg>
+                    <div>
+                        <?php
+                        echo "<p>" . $_GET['mensaje'] ."</p>";
+                        ?>
+                    </div>
+        <?php }
+        } }
+        ?>
         <div class="container">
             <div class="row">
                 <form class="row g-3 form-floating" method="POST" action="recibirDatos.php">
@@ -56,12 +84,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Telefonos:</label>
-                        <textarea class="form-control"  required name="telefono" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" required name="telefono" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">añadir</button>
                     </div>
-
                 </form>
 
     </main>

@@ -88,7 +88,7 @@ class Contacto
 //--TOSTRING	
   	public function ToString()
 	{
-	  	return $this->apellido.", ".$this->nombre." - DNI: ".$this->dni ."- Un Telefono: ".$this->getTelefonos()[0] ;
+	  	return  $this->apellido." :".$this->nombre.":".$this->dni .":".$this->getTelefonos()[0] . ":" .$this->getDomicilio() ;
 	}
 //--------------------------------------------------------------------------------//
 

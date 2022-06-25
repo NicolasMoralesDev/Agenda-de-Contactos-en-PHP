@@ -90,15 +90,12 @@ class AccesoDatosContactos
     
         
         public function __construct() 
-        {
-               
+        {      
             $this->contactos = array();
             
                 if(file_exists(ARCHIVO_CONTACTOS))
                 {
-
                         $fp = fopen(ARCHIVO_CONTACTOS, "r");   //abrimos el archivo con permiso de lectura
-
                         
                         while(!feof($fp))
                         {
@@ -111,7 +108,6 @@ class AccesoDatosContactos
                             
                             }
                         }
-
                         fclose($fp); //cerramos el archivo
                         
                 }

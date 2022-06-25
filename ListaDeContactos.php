@@ -1,5 +1,15 @@
 <?php
+include './Agenda.php';
 
+$contactosNuevos = new Agenda(); 
+
+$contactosNuevos->guardarContactos();
+
+                foreach ( $contactosNuevos->listaDeContactos() as $unContacto)
+                {
+                    $tablaDatos=list($apellido , $nombre , $dni , $telefono , $direccion)  = explode(":", $unContacto->ToString());
+              
+            }; 
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +33,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand font-weight-bold" href="#">
-                <img class="mr-2" src="#" />
+                <img class="mr-2" src="" />
                 Agenda de Contactos
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,15 +53,21 @@
             <thead>
                 <td>Nombre</td>
                 <td>Apellido</td>
-                <td>Direccion</td>
+                <td>DNI</td>
                 <td>Telefono</td>
+                <td>Direccion</td>
             </thead>
-            <tbody>
-
-
-            </tbody>
+      <tbody>
+          <tr>
+          <?php 
+              foreach ($tablaDatos as $tablaDato)
+               {
+                 echo '<td>'. $tablaDato . "</td>";
+               }
+          ?>
+            </tr>
+          </tbody>         
         </table>
-
     </main>
     <footer class="container-fluid container-footer d-flex flex-column align-items-center">
 
