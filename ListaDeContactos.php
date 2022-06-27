@@ -2,14 +2,15 @@
 include './Agenda.php';
 
 $contactosNuevos = new Agenda(); 
+$tablaDatos = Array();
 
 $contactosNuevos->guardarContactos();
 
                 foreach ( $contactosNuevos->listaDeContactos() as $unContacto)
                 {
-                    $tablaDatos=list($apellido , $nombre , $dni , $telefono , $direccion)  = explode(":", $unContacto->ToString());
-              
-            }; 
+                    $unContacto=list($apellido , $nombre , $dni , $telefono , $direccion)  = explode(":", $unContacto->ToString());
+                    array_push($tablaDatos, $unContacto);
+            };   
 ?>
 
 <!DOCTYPE html>
@@ -58,15 +59,21 @@ $contactosNuevos->guardarContactos();
                 <td>Direccion</td>
             </thead>
       <tbody>
-          <tr>
           <?php 
-              foreach ($tablaDatos as $tablaDato)
-               {
-                 echo '<td>'. $tablaDato . "</td>";
-               }
+            foreach ($tablaDatos as $tablaDato)
+            { 
+                              echo '<tr>'; 
+                                foreach ($tablaDato as $clave =>$valor)
+                                {
+                                    echo '<td>'. $valor . "</td>"; 
+                                }
+                              echo '</tr>';  
+            }
           ?>
-            </tr>
-          </tbody>         
+          </tbody> 
+          <tfoot class="text-center"> <td><a class="btn btn-success" href="./DB_contactos.csv" download="Contactos-2022">
+        Descargar reporte en csv
+         </a></td></tfoot>        
         </table>
     </main>
     <footer class="container-fluid container-footer d-flex flex-column align-items-center">
