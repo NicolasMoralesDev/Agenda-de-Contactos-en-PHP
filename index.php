@@ -16,11 +16,10 @@
     <title>Home</title>
 </head>
 
-<body>
+<body> <!-- nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand font-weight-bold" href="#">
-                <img class="mr-2" src="#" />
                 Agenda de Contactos
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,9 +35,9 @@
         </div>
     </nav>
     <main>
-        <?php
+        <?php  /* Mensaje de confirmacion y Error */
 
-        if (isset($_GET['estado'])) {  //si esta seteada la variable
+        if (isset($_GET['estado'])) {  
             if ($_GET['estado'] == "true") {   ?> 
                 <div class="alert alert-success d-flex align-items-center" role="alert">
                     <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
@@ -62,7 +61,7 @@
                     </div>
         <?php }
         } }
-        ?>
+        ?> <!-- Formulario -->
         <div class="container">
             <div class="row">
                 <form class="row g-3 form-floating" method="POST" action="recibirDatos.php">
@@ -92,7 +91,7 @@
                 </form>
 
     </main>
-
+                  <!-- footer -->
     <footer class="container-fluid container-footer d-flex flex-column align-items-center">
 
         <p>Alumno: Juan Nicolas Morales</p>

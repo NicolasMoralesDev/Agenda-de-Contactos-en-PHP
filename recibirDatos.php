@@ -9,6 +9,8 @@ $contactoNuevo = array($_POST['dni'], $_POST['nombre'], $_POST['apellido'], $_PO
 $estado = $contacto->agregarContacto($contactoNuevo);
 $contacto->guardarContactos();
 
+/* Verificamos que los contactos no se repitan */
+
 if ($estado == "¡Guardado, con exito!") {
     header("Location: index.php?estado=true&mensaje=¡Guardado, con exito!!");
     exit();

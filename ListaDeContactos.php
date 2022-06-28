@@ -4,14 +4,17 @@ include './Agenda.php';
 $contactosNuevos = new Agenda(); 
 $tablaDatos = Array();
 
+/* Tabla completa*/
+
 $contactosNuevos->guardarContactos();
 
                 foreach ( $contactosNuevos->listaDeContactos() as $unContacto)
                 {
                     $unContacto=list($apellido , $nombre , $dni , $telefono , $direccion)  = explode(":", $unContacto->ToString());
                     array_push($tablaDatos, $unContacto);
-            };   
-?>
+            };  
+            
+            ?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -30,11 +33,10 @@ $contactosNuevos->guardarContactos();
     <title>Agenda</title>
 </head>
 
-<body>
+<body>    <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand font-weight-bold" href="#">
-                <img class="mr-2" src="" />
                 Agenda de Contactos
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +50,7 @@ $contactosNuevos->guardarContactos();
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> <!-- Tabla - Lista de Contactos -->
     <main>
         <table class="table table-dark table-striped container">
             <thead>
@@ -75,7 +77,7 @@ $contactosNuevos->guardarContactos();
         Descargar reporte en csv
          </a></td></tfoot>        
         </table>
-    </main>
+    </main>  <!-- footer -->
     <footer class="container-fluid container-footer d-flex flex-column align-items-center">
 
         <p>Alumno: Juan Nicolas Morales</p>
